@@ -1,0 +1,12 @@
+a {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.nuxt-link-exact-active {
+  text-decoration-style: double;
+}
+
+a:hover {
+  @apply text-blue-500;
+}

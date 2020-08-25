@@ -58,6 +58,46 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
+  pwa: {
+    icon: {},
+    meta: {
+      name: 'Blog template',
+    },
+    manifest: {
+      name: 'Blog template',
+      short_name: 'blog-template',
+      start_url: '',
+      icons: [],
+    },
+  },
+  sitemap: {
+    // Change this to whatever it ends up being
+    hostname: 'https://example.com',
+  },
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text)
+
+        document.readingTime = text
+      }
+    },
+  },
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const blog = await $content('blog').only(['path']).fetch()
+
+      return blog.map((file) => file.path)
+    },
+  },
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-dracula.css',
+      },
+    },
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
