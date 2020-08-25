@@ -10,23 +10,23 @@ Fork this template, make changes to the styling, write some markdown posts, and 
 
 ## Styling
 
-The template uses Tailwind, although if you want to add some normal CSS you can do so in the /assets/css/custom.css file.
+The template uses Tailwind, although if you want to add some normal CSS you can do so in the [/assets/css/custom.css](./assets/css/custom.css) file.
 
 The files you probably want to change are:
 
-**/pages/index.vue**: Landing page
+**[/pages/index.vue](./pages/index.vue)**: Landing page
 
-**/pages/about.vue**: About page
+**[/pages/about.vue](./pages/about.vue)**: About page
 
-**/pages/blog/index.vue**: Blog post listing page
+**[/pages/blog/index.vue](./pages/blog/index.vue)**: Blog post listing page
 
-**/pages/blog/\_slug.vue**: Page used for the posts
+**[/pages/blog/\_slug.vue](./pages/blog/_slug.vue)**: Page used for the posts
 
 ## Writing Content
 
 There's an [about.md](./content/about.md), where you can write details about yourself.
 
-For blog posts, each file you create inside the `/content/blog/` folder will become a post. Check the Content module for more details about what you can do.
+For blog posts, each file you create inside the [/content/blog/](./content/blog/) folder will become a post. Check the Content module for more details about what you can do.
 
 ## Build Setup
 
